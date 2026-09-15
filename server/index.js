@@ -45,21 +45,21 @@ app.post('/api/contact', async (request, response) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      host: process.env.BREVO_SMTP_HOST || 'smtp-relay.brevo.com',
-      port: Number(process.env.BREVO_SMTP_PORT || 2525),
+      host: (process.env.BREVO_SMTP_HOST || 'smtp-relay.brevo.com').trim(),
+      port: Number((process.env.BREVO_SMTP_PORT || '2525').trim()),
       secure: false,
       connectionTimeout: 15000,
       greetingTimeout: 15000,
       socketTimeout: 20000,
       auth: {
-        user: process.env.BREVO_SMTP_USER,
-        pass: process.env.BREVO_SMTP_KEY,
+        user: process.env.BREVO_SMTP_USER?.trim(),
+        pass: process.env.BREVO_SMTP_KEY?.trim(),
       },
     })
 
     await transporter.sendMail({
-      from: process.env.BREVO_FROM_EMAIL,
-      to: process.env.CONTACT_TO_EMAIL,
+      from: process.env.BREVO_FROM_EMAIL?.trim(),
+      to: process.env.CONTACT_TO_EMAIL?.trim(),
       replyTo: email,
       subject: `Portfolio message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
