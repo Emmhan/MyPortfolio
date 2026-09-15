@@ -1,5 +1,4 @@
 import 'dotenv/config'
-import cors from 'cors'
 import express from 'express'
 import nodemailer from 'nodemailer'
 
@@ -15,7 +14,17 @@ const allowedOrigins = [...new Set([
   ...configuredOrigins,
 ])]
 
-app.use(cors({ origin: allowedOrigins }))
+app.use((request, response, next) => {
+  const origin = request.headers.origin
+  if (origin && allowedOrigins.includes(origin)) {
+    response.setHeader('Access-Control-Allow-Origin', origin)
+    response.setHeader('Vary', 'Origin')
+    response.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
+    response.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+  }
+  if (request.method === 'OPTIONS') return response.status(204).end()
+  next()
+})
 app.use(express.json({ limit: '10kb' }))
 
 app.get('/health', (_request, response) => response.json({ status: 'ok' }))
