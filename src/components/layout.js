@@ -1,7 +1,7 @@
 export function renderLayout(page, content) {
   return `
     <header class="site-header">
-      <a class="brand" href="/" aria-label="Emmhan Russell home">ER<span>EMMHAN RUSSELL</span></a>
+      <a class="brand" href="/" aria-label="Emmhan Russell home"><img class="brand-logo" src="/Images/Logo.png" alt="Emmhan Russell" /></a>
       <nav aria-label="Primary navigation">
         <a class="${page === 'home' ? 'active' : ''}" href="/">Home</a>
         <a class="${page === 'about' ? 'active' : ''}" href="/about">About</a>
