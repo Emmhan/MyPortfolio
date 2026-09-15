@@ -5,10 +5,15 @@ import nodemailer from 'nodemailer'
 
 const app = express()
 const port = Number(process.env.PORT || 3000)
-const allowedOrigins = (process.env.FRONTEND_ORIGINS || 'https://emmhanbantolin.me,https://www.emmhanbantolin.me')
+const configuredOrigins = (process.env.FRONTEND_ORIGINS || '')
   .split(',')
   .map((origin) => origin.trim())
   .filter(Boolean)
+const allowedOrigins = [...new Set([
+  'https://emmhanbantolin.me',
+  'https://www.emmhanbantolin.me',
+  ...configuredOrigins,
+])]
 
 app.use(cors({ origin: allowedOrigins }))
 app.use(express.json({ limit: '10kb' }))
