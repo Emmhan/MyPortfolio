@@ -282,3 +282,23 @@ code {
     border-right-color: var(--border);
   }
 }
+
+/* Keep the project catalogue in the landing page's visual language. */
+.featured-projects .section-heading { background: transparent; }
+.featured-projects .section-heading h1 { font-size: clamp(42px, 5.3vw, 78px); line-height: .98; letter-spacing: -3.5px; }
+.featured-projects .section-heading p { color: var(--muted); }
+.project-filters { gap: 10px; }
+.filter-button, .project-pagination button { border-color: var(--line); border-radius: 3px; background: transparent; color: var(--ink); font-weight: 600; transition: transform .2s, background .2s, color .2s; }
+.filter-button:hover { transform: translateY(-2px); }
+.filter-button.active { background: var(--ink); border-color: var(--ink); }
+.project-search { border-color: var(--line); border-radius: 3px; background: transparent; color: var(--muted); }
+.project-search input { background: transparent; }
+.featured-grid { gap: 40px; }
+.featured-card { border-color: var(--line); border-radius: 3px; background: rgba(255, 255, 255, .72); box-shadow: 0 12px 25px rgba(17, 17, 17, .08); }
+.featured-card:hover { box-shadow: 0 18px 32px rgba(17, 17, 17, .13); }
+.featured-card h2 { color: var(--ink); letter-spacing: -1px; text-transform: none; }
+.project-type, .web-type, .arduino-type { border-radius: 3px; background: var(--ink); }
+.project-pagination { color: var(--muted); font-family: 'DM Mono', monospace; }
+@media (max-width: 700px) {
+  .featured-projects .section-heading h1 { font-size: clamp(36px, 11vw, 52px); letter-spacing: -2.5px; }
+}
