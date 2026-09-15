@@ -13,8 +13,8 @@ export function renderProjectsPage() {
       <div class="featured-grid">
         <a class="featured-card" data-category="web" href="/projects/city-imus"><h2>City of Imus Scholarship Program</h2><span class="project-type web-type">&lt;/&gt; &nbsp; Web Development</span><div class="project-image scholarship-image"><span>View Project →</span></div></a>
         <a class="featured-card" data-category="arduino" href="/projects/smart-parking"><h2>Smart Parking Management System</h2><span class="project-type arduino-type">∞ &nbsp; Arduino</span><div class="project-image parking-image"><span>View Project →</span></div></a>
-        <article class="featured-card project-placeholder-card" data-category="web"><h2>New Web Project</h2><span class="project-type web-type">&lt;/&gt; &nbsp; Web Development</span><div class="project-image project-placeholder-image"><span>Project coming soon</span></div></article>
-        <article class="featured-card project-placeholder-card" data-category="arduino"><h2>New Arduino Project</h2><span class="project-type arduino-type">∞ &nbsp; Arduino</span><div class="project-image project-placeholder-image"><span>Project coming soon</span></div></article>
+        <a class="featured-card project-placeholder-card" data-category="web" href="/projects/new-web-project"><h2>New Web Project</h2><span class="project-type web-type">&lt;/&gt; &nbsp; Web Development</span><div class="project-image project-placeholder-image"><span>View Project →</span></div></a>
+        <a class="featured-card project-placeholder-card" data-category="arduino" href="/projects/new-arduino-project"><h2>New Arduino Project</h2><span class="project-type arduino-type">∞ &nbsp; Arduino</span><div class="project-image project-placeholder-image"><span>View Project →</span></div></a>
       </div>
       <div class="project-pagination"><span>Selected work by Emmhan Russell</span></div>
     </section>

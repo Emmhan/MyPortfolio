@@ -10,6 +10,18 @@ const projects = {
     image: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1400&q=85',
     tools: ['Arduino', 'C++', 'HTML5', 'CSS3'],
     description: 'A practical smart parking concept that uses connected hardware and a clear interface to help drivers find and manage available parking spaces. The project focuses on making everyday parking simpler, faster, and more organized.'
+  },
+  newWebProject: {
+    title: 'New Web Project', date: 'Add project date',
+    image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85',
+    tools: ['HTML5', 'CSS3', 'JavaScript'],
+    description: 'Add your project description here, then replace the project link below with the live project URL.'
+  },
+  newArduinoProject: {
+    title: 'New Arduino Project', date: 'Add project date',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85',
+    tools: ['Arduino', 'C++'],
+    description: 'Add your project description here, then replace the project link below with the live project URL.'
   }
 }
 
