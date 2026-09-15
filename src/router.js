@@ -29,9 +29,10 @@ function setupContactForm() {
   const form = document.querySelector('#contact-form')
   form?.addEventListener('submit', (event) => {
     event.preventDefault()
-    const formData = Object.fromEntries(new FormData(event.currentTarget))
-    const status = event.currentTarget.querySelector('.form-status')
-    const button = event.currentTarget.querySelector('button[type="submit"]')
+    const submittedForm = event.currentTarget
+    const formData = Object.fromEntries(new FormData(submittedForm))
+    const status = submittedForm.querySelector('.form-status')
+    const button = submittedForm.querySelector('button[type="submit"]')
     const apiUrl = import.meta.env.VITE_CONTACT_API_URL || 'https://myportfolio-poed.onrender.com/api/contact'
     status.textContent = 'Sending message...'
     button.disabled = true
@@ -44,7 +45,7 @@ function setupContactForm() {
         const result = await response.json()
         if (!response.ok) throw new Error(result.error || 'Unable to send your message.')
         status.textContent = result.message
-        event.currentTarget.reset()
+        submittedForm.reset()
       })
       .catch((error) => {
         status.textContent = error.message
