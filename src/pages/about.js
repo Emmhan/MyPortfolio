@@ -2,7 +2,7 @@ export function renderAboutPage() {
   return `
     <section class="section-shell about page-section">
       <div class="about-content">
-        <img class="image-placeholder about-image" src="/Images/aboutmeprofile.jpg" alt="Emmhan Russell" />
+        <div class="about-image-frame"><img class="about-image" src="/Images/aboutmeprofile.jpg" alt="Emmhan Russell" /></div>
         <div class="about-copy">
           <h2>About Me</h2>
           <p>I’m currently an undergraduate IT student passionate about technology and software development. Through my academic journey and OJT internship, I’ve been developing my skills in various programming languages and technologies.</p>
