@@ -29,6 +29,17 @@ const projects = {
   }
 }
 
+const toolIcons = {
+  HTML5: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
+  PHP: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
+  CSS3: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
+  MySQL: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',
+  JavaScript: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+  Bootstrap: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg',
+  Arduino: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg',
+  'C++': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg',
+}
+
 export function renderProjectDetailPage(project) {
   const detail = projects[project]
   return `
@@ -38,7 +49,7 @@ export function renderProjectDetailPage(project) {
         <div class="detail-gallery"><img src="${detail.image}" alt="${detail.title} project preview" /></div>
         <div class="detail-copy"><h1>${detail.title}</h1><p class="detail-date">${detail.date}</p><article><h2>Description</h2>${detail.description.split('\n\n').map((paragraph) => `<p>${paragraph}</p>`).join('')}<a class="project-view-button" href="${detail.url}" target="_blank" rel="noreferrer">View Project <span aria-hidden="true">↗</span></a></article></div>
       </div>
-      <section class="detail-tools"><h2>Tools:</h2><div>${detail.tools.map((tool) => `<span>${tool}</span>`).join('')}</div></section>
+      <section class="detail-tools"><h2>Tools:</h2><div class="detail-tools-grid">${detail.tools.map((tool) => `<div class="skill-card detail-tool-card"><img src="${toolIcons[tool]}" alt="" /><span>${tool}</span></div>`).join('')}</div></section>
     </section>
   `
 }

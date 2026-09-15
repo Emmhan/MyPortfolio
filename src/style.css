@@ -308,3 +308,7 @@ code {
 .project-placeholder-image { background: linear-gradient(135deg, #eee8f8, #f8dce9); }
 .project-placeholder-card .project-image::after { background: none; }
 .project-placeholder-card .project-image span { color: var(--ink); }
+.detail-tools-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 24px; }
+.detail-tools-grid .detail-tool-card { min-height: 150px; padding: 20px 14px; }
+.detail-tools-grid .detail-tool-card span { padding: 0; border: 0; color: var(--ink); font-weight: 600; }
+@media (max-width: 900px) { .detail-tools-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
