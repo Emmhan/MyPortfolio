@@ -16,7 +16,7 @@ export default async function handler(request, response) {
   try {
     const transporter = nodemailer.createTransport({
       host: process.env.BREVO_SMTP_HOST || 'smtp-relay.brevo.com',
-      port: Number(process.env.BREVO_SMTP_PORT || 2525),
+      port: Number(process.env.BREVO_SMTP_PORT || 587),
       secure: false,
       connectionTimeout: 15000,
       greetingTimeout: 15000,
