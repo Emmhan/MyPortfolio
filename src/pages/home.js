@@ -1,4 +1,4 @@
-const portrait = '/images/landingpageprofile.png'
+const portrait = '/Images/landingpageprofile.png'
 
 export function renderHomePage() {
   return `
