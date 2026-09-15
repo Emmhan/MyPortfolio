@@ -313,3 +313,7 @@ code {
 .detail-tools-grid .detail-tool-card { min-height: 150px; padding: 20px 14px; }
 .detail-tools-grid .detail-tool-card span { padding: 0; border: 0; color: var(--ink); font-weight: 600; }
 @media (max-width: 900px) { .detail-tools-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.contact .page-title { font-size: clamp(54px, 5.3vw, 100px); line-height: .98; letter-spacing: -3.5px; font-weight: 800; }
+.contact .page-title span { background: linear-gradient(100deg, #4f7cff 0%, #8f5bea 48%, #ff4b9b 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.contact input:focus, .contact textarea:focus { outline: 0; border-color: #aa80dc; box-shadow: 0 0 0 2px rgba(170, 128, 220, .16); }
+.form-status { color: #8f5bea; }
