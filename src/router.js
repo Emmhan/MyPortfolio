@@ -27,27 +27,15 @@ function currentPage() {
 
 function setupContactForm() {
   const form = document.querySelector('#contact-form')
-  form?.addEventListener('submit', async (event) => {
+  form?.addEventListener('submit', (event) => {
     event.preventDefault()
+    const formData = Object.fromEntries(new FormData(event.currentTarget))
+    const subject = `Portfolio message from ${formData.name}`
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('emmhandelrosario@gmail.com')}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    const gmailWindow = window.open(gmailUrl, '_blank', 'noopener,noreferrer')
     const status = event.currentTarget.querySelector('.form-status')
-    const button = event.currentTarget.querySelector('button[type="submit"]')
-    status.textContent = 'Sending message...'
-    button.disabled = true
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(Object.fromEntries(new FormData(event.currentTarget))),
-      })
-      const result = await response.json()
-      if (!response.ok) throw new Error(result.error || 'Unable to send your message.')
-      status.textContent = 'Thanks! Your message has been sent.'
-      event.currentTarget.reset()
-    } catch (error) {
-      status.textContent = error.message
-    } finally {
-      button.disabled = false
-    }
+    status.textContent = gmailWindow ? 'Gmail compose opened.' : 'Please allow pop-ups to open Gmail.'
   })
 }
 
