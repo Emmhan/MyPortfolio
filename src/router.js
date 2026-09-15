@@ -30,12 +30,28 @@ function setupContactForm() {
   form?.addEventListener('submit', (event) => {
     event.preventDefault()
     const formData = Object.fromEntries(new FormData(event.currentTarget))
-    const subject = `Portfolio message from ${formData.name}`
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('emmhandelrosario@gmail.com')}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    const gmailWindow = window.open(gmailUrl, '_blank', 'noopener,noreferrer')
     const status = event.currentTarget.querySelector('.form-status')
-    status.textContent = gmailWindow ? 'Gmail compose opened.' : 'Please allow pop-ups to open Gmail.'
+    const button = event.currentTarget.querySelector('button[type="submit"]')
+    const apiUrl = import.meta.env.VITE_CONTACT_API_URL || '/api/contact'
+    status.textContent = 'Sending message...'
+    button.disabled = true
+    fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    })
+      .then(async (response) => {
+        const result = await response.json()
+        if (!response.ok) throw new Error(result.error || 'Unable to send your message.')
+        status.textContent = result.message
+        event.currentTarget.reset()
+      })
+      .catch((error) => {
+        status.textContent = error.message
+      })
+      .finally(() => {
+        button.disabled = false
+      })
   })
 }
 
