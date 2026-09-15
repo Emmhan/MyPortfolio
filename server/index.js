@@ -46,8 +46,11 @@ app.post('/api/contact', async (request, response) => {
   try {
     const transporter = nodemailer.createTransport({
       host: process.env.BREVO_SMTP_HOST || 'smtp-relay.brevo.com',
-      port: Number(process.env.BREVO_SMTP_PORT || 587),
+      port: Number(process.env.BREVO_SMTP_PORT || 2525),
       secure: false,
+      connectionTimeout: 15000,
+      greetingTimeout: 15000,
+      socketTimeout: 20000,
       auth: {
         user: process.env.BREVO_SMTP_USER,
         pass: process.env.BREVO_SMTP_KEY,
