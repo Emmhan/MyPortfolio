@@ -305,3 +305,6 @@ code {
 @media (max-width: 700px) {
   .featured-projects .section-heading h1 { font-size: clamp(36px, 11vw, 52px); letter-spacing: -2.5px; }
 }
+.project-placeholder-image { background: linear-gradient(135deg, #eee8f8, #f8dce9); }
+.project-placeholder-card .project-image::after { background: none; }
+.project-placeholder-card .project-image span { color: var(--ink); }
