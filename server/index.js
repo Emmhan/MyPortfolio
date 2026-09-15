@@ -5,7 +5,7 @@ import nodemailer from 'nodemailer'
 
 const app = express()
 const port = Number(process.env.PORT || 3000)
-const allowedOrigins = (process.env.FRONTEND_ORIGINS || 'https://emmhanbantolin.me')
+const allowedOrigins = (process.env.FRONTEND_ORIGINS || 'https://emmhanbantolin.me,https://www.emmhanbantolin.me')
   .split(',')
   .map((origin) => origin.trim())
   .filter(Boolean)

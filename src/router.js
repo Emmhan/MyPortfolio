@@ -32,7 +32,7 @@ function setupContactForm() {
     const formData = Object.fromEntries(new FormData(event.currentTarget))
     const status = event.currentTarget.querySelector('.form-status')
     const button = event.currentTarget.querySelector('button[type="submit"]')
-    const apiUrl = import.meta.env.VITE_CONTACT_API_URL || '/api/contact'
+    const apiUrl = import.meta.env.VITE_CONTACT_API_URL || 'https://myportfolio-poed.onrender.com/api/contact'
     status.textContent = 'Sending message...'
     button.disabled = true
     fetch(apiUrl, {
