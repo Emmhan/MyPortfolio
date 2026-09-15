@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer'
 
-const allowedOrigin = 'https://emmhanbantolin.me'
+const allowedOrigin = 'https://www.emmhanbantolin.me'
 
 export default async function handler(request, response) {
   response.setHeader('Access-Control-Allow-Origin', allowedOrigin)
