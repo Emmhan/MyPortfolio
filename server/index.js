@@ -27,7 +27,15 @@ app.use((request, response, next) => {
 })
 app.use(express.json({ limit: '10kb' }))
 
-app.get('/health', (_request, response) => response.json({ status: 'ok' }))
+const smtpConfigured = Boolean(
+  process.env.BREVO_SMTP_USER
+  && process.env.BREVO_SMTP_KEY
+  && process.env.BREVO_FROM_EMAIL
+  && process.env.CONTACT_TO_EMAIL,
+)
+
+app.get('/', (_request, response) => response.json({ service: 'portfolio-contact-api', status: 'ok' }))
+app.get('/health', (_request, response) => response.json({ status: 'ok', smtpConfigured }))
 
 app.post('/api/contact', async (request, response) => {
   const { name, email, message } = request.body || {}
@@ -56,8 +64,13 @@ app.post('/api/contact', async (request, response) => {
 
     return response.json({ message: 'Message sent successfully.' })
   } catch (error) {
-    console.error('Contact email failed:', error)
-    return response.status(500).json({ error: 'Unable to send your message right now.' })
+    console.error('Contact email failed:', {
+      code: error.code,
+      responseCode: error.responseCode,
+      command: error.command,
+      message: error.message,
+    })
+    return response.status(500).json({ error: 'Email service configuration or delivery failed. Check the backend environment variables.' })
   }
 })
 
