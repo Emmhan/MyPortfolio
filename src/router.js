@@ -27,10 +27,27 @@ function currentPage() {
 
 function setupContactForm() {
   const form = document.querySelector('#contact-form')
-  form?.addEventListener('submit', (event) => {
+  form?.addEventListener('submit', async (event) => {
     event.preventDefault()
-    event.currentTarget.querySelector('.form-status').textContent = 'Thanks! Your message is ready to send.'
-    event.currentTarget.reset()
+    const status = event.currentTarget.querySelector('.form-status')
+    const button = event.currentTarget.querySelector('button[type="submit"]')
+    status.textContent = 'Sending message...'
+    button.disabled = true
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(event.currentTarget))),
+      })
+      const result = await response.json()
+      if (!response.ok) throw new Error(result.error || 'Unable to send your message.')
+      status.textContent = 'Thanks! Your message has been sent.'
+      event.currentTarget.reset()
+    } catch (error) {
+      status.textContent = error.message
+    } finally {
+      button.disabled = false
+    }
   })
 }
 
