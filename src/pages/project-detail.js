@@ -2,21 +2,21 @@ const projects = {
   cityImus: {
     title: 'City of Imus Scholarship Program', date: 'July 3, 2024',
     url: 'https://example.com',
-    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=85',
+    image: '/Images/imused.png',
     tools: ['HTML5', 'PHP', 'CSS3', 'MySQL', 'JavaScript', 'Bootstrap'],
     description: 'The City of Imus Scholarship is designed not only to ease the financial burden of higher education but also to invest in the future leaders, innovators, and change-makers of tomorrow. This program empowers the next generation of thinkers, builders, advocates, and leaders by supporting them financially and personally throughout their higher education journey.\n\nOur system simplifies the scholarship application process, providing users with an intuitive experience. Users can explore scholarship information, review application requirements, and monitor their scholarship status through a structured dashboard.'
   },
   smartParking: {
     title: 'Smart Parking Management System', date: 'June 18, 2024',
     url: 'https://example.com',
-    image: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1400&q=85',
+    image: '/images/smartparking.jpg',
     tools: ['Arduino', 'C++', 'HTML5', 'CSS3'],
     description: 'A practical smart parking concept that uses connected hardware and a clear interface to help drivers find and manage available parking spaces. The project focuses on making everyday parking simpler, faster, and more organized.'
   },
   newWebProject: {
     title: 'Team Porfolio', date: 'Add project date',
     url: 'https://innobit.vercel.app',
-    image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85',
+    image: '/Images/teamportfolio.png',
     tools: ['React.js', 'Tailwind', 'Node.js'],
     description: 'A team portfolio for InnoBit, a student team from Cavite State University - Imus Campus united by a passion for technology, innovation, and meaningful impact. The website introduces the team, shares its vision and mission, highlights its projects, and provides a space for collaboration and connection.'
   }

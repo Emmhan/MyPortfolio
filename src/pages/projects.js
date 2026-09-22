@@ -13,7 +13,7 @@ export function renderProjectsPage() {
       <div class="featured-grid">
         <a class="featured-card" data-category="web" href="/projects/city-imus"><h2>City of Imus Scholarship Program</h2><span class="project-type web-type">&lt;/&gt; &nbsp; Web Development</span><div class="project-image scholarship-image"></div></a>
         <a class="featured-card" data-category="arduino" href="/projects/smart-parking"><h2>Smart Parking Management System</h2><span class="project-type arduino-type">∞ &nbsp; Arduino</span><div class="project-image parking-image"></div></a>
-        <a class="featured-card project-placeholder-card" data-category="web" href="/projects/new-web-project"><h2>Team Porfolio</h2><span class="project-type web-type">&lt;/&gt; &nbsp; Web Development</span><div class="project-image project-placeholder-image"><span>View Project →</span></div></a>
+        <a class="featured-card project-placeholder-card" data-category="web" href="/projects/new-web-project"><h2>Team Porfolio</h2><span class="project-type web-type">&lt;/&gt; &nbsp; Web Development</span><div class="project-image team-portfolio-image"><span>View Project →</span></div></a>
       </div>
       <div class="project-pagination"><span>Selected work by Emmhan Russell</span></div>
     </section>
