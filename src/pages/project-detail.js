@@ -19,6 +19,13 @@ const projects = {
     image: '/Images/teamportfolio.png',
     tools: ['React.js', 'Tailwind', 'Node.js'],
     description: 'A team portfolio for InnoBit, a student team from Cavite State University - Imus Campus united by a passion for technology, innovation, and meaningful impact. The website introduces the team, shares its vision and mission, highlights its projects, and provides a space for collaboration and connection.'
+  },
+  mobileProject: {
+    title: 'Mobile Application Project', date: 'Add project date',
+    url: 'https://example.com',
+    image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1400&q=85',
+    tools: ['JavaScript'],
+    description: 'A mobile application project focused on creating a practical, accessible, and user-friendly experience for mobile users. Project details and the live application link can be added here when available.'
   }
 }
 

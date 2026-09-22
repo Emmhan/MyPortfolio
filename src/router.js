@@ -16,6 +16,7 @@ const projectRoutes = {
   '/projects/city-imus': 'cityImus',
   '/projects/smart-parking': 'smartParking',
   '/projects/new-web-project': 'newWebProject',
+  '/projects/mobile-project': 'mobileProject',
 }
 
 function currentPage() {
