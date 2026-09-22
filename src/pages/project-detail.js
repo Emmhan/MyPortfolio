@@ -9,7 +9,7 @@ const projects = {
   smartParking: {
     title: 'Smart Parking Management System', date: 'June 18, 2024',
     url: 'https://example.com',
-    image: '/images/smartparking.jpg',
+    image: '/Images/smartparking.jpg',
     tools: ['Arduino', 'C++', 'HTML5', 'CSS3'],
     description: 'A practical smart parking concept that uses connected hardware and a clear interface to help drivers find and manage available parking spaces. The project focuses on making everyday parking simpler, faster, and more organized.'
   },

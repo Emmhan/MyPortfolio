@@ -307,7 +307,9 @@ code {
   .featured-projects .section-heading h1 { font-size: clamp(36px, 11vw, 52px); letter-spacing: -2.5px; }
 }
 .project-placeholder-image { background: linear-gradient(135deg, #eee8f8, #f8dce9); }
-.team-portfolio-image { background: #050505 url('/Images/Logo.png') center / contain no-repeat; }
+.scholarship-image { background-image: url('/Images/imused.png'); }
+.parking-image { background-image: url('/Images/smartparking.jpg'); }
+.team-portfolio-image { background: #050505 url('/Images/teamportfolio.png') center / cover no-repeat; }
 .project-placeholder-card .project-image::after { background: none; }
 .project-placeholder-card .project-image span { color: var(--ink); }
 .detail-tools-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 24px; }
