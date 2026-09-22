@@ -25,7 +25,7 @@ const projects = {
     url: 'https://example.com',
     image: '/Images/mobile.png',
     tools: ['Unity', 'C#', 'HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-    description: 'A mobile application project focused on creating a practical, accessible, and user-friendly experience for mobile users. Project details and the live application link can be added here when available.'
+    description: 'An Android-based mobile learning platform designed to enhance the learning experience of DCIT-21: Introduction to Computing students at Cavite State University–Imus Campus. The system provides interactive lessons, assessments, and 2D simulations of computer hardware activities, allowing students to practice concepts such as computer assembly, disassembly, and basic hardware servicing in a virtual environment. The platform also includes performance monitoring to help students track their progress while giving instructors a way to monitor and evaluate learning performance. By combining mobile learning, interactive simulations, and progress tracking, the project aims to provide students with accessible hands-on practice beyond the traditional classroom and laboratory setting.'
   }
 }
 
