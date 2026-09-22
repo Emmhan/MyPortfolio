@@ -1,6 +1,6 @@
 const projects = {
   cityImus: {
-    title: 'City of Imus Scholarship Program', date: 'July 3, 2024',
+    title: 'City of Imus Scholarship Program', date: 'November 17, 2024',
     url: 'https://example.com',
     image: '/Images/imused.png',
     tools: ['HTML5', 'PHP', 'CSS3', 'MySQL', 'JavaScript', 'Bootstrap'],
@@ -14,16 +14,16 @@ const projects = {
     description: 'A practical smart parking concept that uses connected hardware and a clear interface to help drivers find and manage available parking spaces. The project focuses on making everyday parking simpler, faster, and more organized.'
   },
   newWebProject: {
-    title: 'Team Porfolio', date: 'Add project date',
+    title: 'Team Porfolio', date: 'Febuary 1, 2025',
     url: 'https://innobit.vercel.app',
     image: '/Images/teamportfolio.png',
     tools: ['React.js', 'Tailwind', 'Node.js'],
     description: 'A team portfolio for InnoBit, a student team from Cavite State University - Imus Campus united by a passion for technology, innovation, and meaningful impact. The website introduces the team, shares its vision and mission, highlights its projects, and provides a space for collaboration and connection.'
   },
   mobileProject: {
-    title: 'Mobile Application Project', date: 'Add project date',
+    title: 'AN ANDROID-BASED MOBILE LEARNING PLATFORM FOR DCIT-21 INTRODUCTION TO COMPUTING COURSE WITH 2D SIMULATION AND PERFORMANCE MONITORING', date: 'Add project date',
     url: 'https://example.com',
-    image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1400&q=85',
+    image: '/Images/mobile.png',
     tools: ['JavaScript'],
     description: 'A mobile application project focused on creating a practical, accessible, and user-friendly experience for mobile users. Project details and the live application link can be added here when available.'
   }
