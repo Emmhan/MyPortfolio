@@ -7,7 +7,7 @@ export function renderAboutPage() {
           <h2>About Me</h2>
           <p>I’m currently an undergraduate IT student passionate about technology and software development. Through my academic journey and OJT internship, I’ve been developing my skills in various programming languages and technologies.</p>
           <p>I enjoy building web applications, solving complex problems, and continuously learning new technologies. My goal is to become a skilled software developer and contribute to innovative projects.</p>
-          <a class="button button-dark" href="/CVRUSUME.pdf?v=2" download="Emmhan-Russell-Resume.pdf">Download Resume <span aria-hidden="true">↓</span></a>
+          <a class="button button-dark" href="/CVRUSUME.pdf?v=3" download="Emmhan-Russell-Resume.pdf">Download Resume <span aria-hidden="true">↓</span></a>
         </div>
       </div>
       <div class="skills-heading"><h2>Skills &amp; Technologies</h2><p>Tools I use to turn ideas into reality.</p></div>
