@@ -21,7 +21,7 @@ const projects = {
     description: 'A team portfolio for InnoBit, a student team from Cavite State University - Imus Campus united by a passion for technology, innovation, and meaningful impact. The website introduces the team, shares its vision and mission, highlights its projects, and provides a space for collaboration and connection.'
   },
   mobileProject: {
-    title: 'AN ANDROID-BASED MOBILE LEARNING PLATFORM FOR DCIT-21 INTRODUCTION TO COMPUTING COURSE WITH 2D SIMULATION AND PERFORMANCE MONITORING', date: 'Add project date',
+    title: 'AN ANDROID-BASED MOBILE LEARNING PLATFORM FOR DCIT-21 INTRODUCTION TO COMPUTING COURSE WITH 2D SIMULATION AND PERFORMANCE MONITORING', date: 'July 18, 2025',
     url: 'https://example.com',
     image: '/Images/mobile.png',
     tools: ['Unity', 'C#', 'HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
