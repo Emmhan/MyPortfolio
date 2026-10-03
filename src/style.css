@@ -316,7 +316,7 @@ code {
 .third-graphic-image { background-image: url('/Images/ThirdGraphic.png'); }
 .fourth-graphic-image { background-image: url('/Images/FourthGraphic.png'); }
 .graphic-preview { cursor: zoom-in; }
-.graphic-detail-gallery .graphic-preview { width: 100%; }
+.graphic-detail-gallery .graphic-preview { width: 100%; aspect-ratio: auto; max-height: 75vh; object-fit: contain; cursor: zoom-in; background: #eef0f3; }
 .image-lightbox { position: fixed; z-index: 1000; inset: 0; display: grid; place-items: center; padding: 32px; background: rgba(7, 10, 18, .9); }
 .image-lightbox[hidden] { display: none; }
 .image-lightbox img { max-width: min(1100px, 94vw); max-height: 90vh; object-fit: contain; box-shadow: 0 20px 60px rgba(0, 0, 0, .35); }
