@@ -316,7 +316,10 @@ code {
 .third-graphic-image { background-image: url('/Images/ThirdGraphic.png'); }
 .fourth-graphic-image { background-image: url('/Images/FourthGraphic.png'); }
 .graphic-project-card .project-image { border: 1px solid var(--line); pointer-events: none; }
-.graphic-detail-gallery img { aspect-ratio: auto; max-height: 75vh; object-fit: contain; background: #eef0f3; }
+.graphic-detail-gallery { position: relative; overflow: visible; padding: 8px; isolation: isolate; background: transparent; }
+.graphic-detail-gallery::before { content: ''; position: absolute; z-index: -2; inset: 0; border-radius: 8px; background: linear-gradient(135deg, #7da8ff, #cda8f8 48%, #f59be4); transform: rotate(3deg); }
+.graphic-detail-gallery::after { content: ''; position: absolute; z-index: -1; inset: 7px; border-radius: 4px; background: var(--paper); }
+.graphic-detail-gallery img { aspect-ratio: auto; max-height: 75vh; object-fit: contain; background: #eef0f3; border-radius: 4px; }
 .project-placeholder-card .project-image::after { background: none; }
 .project-placeholder-card .project-image span { color: var(--ink); }
 .detail-tools-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 24px; }
