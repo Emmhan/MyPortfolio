@@ -28,25 +28,25 @@ const projects = {
     description: 'An Android-based mobile learning platform designed to enhance the learning experience of DCIT-21: Introduction to Computing students at Cavite State University–Imus Campus. The system provides interactive lessons, assessments, and 2D simulations of computer hardware activities, allowing students to practice concepts such as computer assembly, disassembly, and basic hardware servicing in a virtual environment. The platform also includes performance monitoring to help students track their progress while giving instructors a way to monitor and evaluate learning performance. By combining mobile learning, interactive simulations, and progress tracking, the project aims to provide students with accessible hands-on practice beyond the traditional classroom and laboratory setting.'
   },
   visualArchive: {
-    title: 'Visual Archive', date: 'Add project date',
+    title: 'Visual Archive', date: 'October 01, 2026',
     image: '/Images/FirstGraphic.png',
     tools: ['Graphic Design'],
     description: 'A visual archive poster exploring editorial composition, image treatment, typography, and an urban night-shift aesthetic.'
   },
   tofuShop: {
-    title: 'Fujiwara Tofu Shop', date: 'Add project date',
+    title: 'Fujiwara Tofu Shop', date: 'October 01, 2026',
     image: '/Images/SecondGraphic.png',
     tools: ['Graphic Design'],
     description: 'A product-focused graphic design piece for Fujiwara Tofu Shop, combining bold typography, automotive-inspired imagery, and a strong red and gray visual system.'
   },
   starbucksCampaign: {
-    title: 'Starbucks Frappuccino Campaign', date: 'Add project date',
+    title: 'Starbucks Frappuccino Campaign', date: 'September 28, 2026',
     image: '/Images/ThirdGraphic.png',
     tools: ['Graphic Design'],
     description: 'A promotional beverage graphic featuring layered product visuals, flavor callouts, and an energetic campaign layout.'
   },
   portraitEditorial: {
-    title: 'Portrait Editorial', date: 'Add project date',
+    title: 'Portrait Editorial', date: 'September 28, 2026',
     image: '/Images/FourthGraphic.png',
     tools: ['Graphic Design'],
     description: 'An editorial portrait composition using dramatic blue tones, layered textures, and vertical typography to create a moody visual identity.'
@@ -78,7 +78,7 @@ export function renderProjectDetailPage(project) {
     <section class="project-detail page-section">
       <a class="project-back" href="/projects">← All Projects</a>
       <div class="project-detail-grid">
-        <div class="detail-gallery"><img src="${detail.image}" alt="${detail.title} project preview" /></div>
+        <div class="detail-gallery${detail.tools.includes('Graphic Design') ? ' graphic-detail-gallery' : ''}"><img class="${detail.tools.includes('Graphic Design') ? 'graphic-preview' : ''}" src="${detail.image}" alt="${detail.title} project preview"${detail.tools.includes('Graphic Design') ? ` data-full-image="${detail.image}" tabindex="0" role="button"` : ''} /></div>
         <div class="detail-copy"><h1>${detail.title}</h1><p class="detail-date">${detail.date}</p><article><h2>Description</h2>${detail.description.split('\n\n').map((paragraph) => `<p>${paragraph}</p>`).join('')}${project === 'newWebProject' ? `<a class="project-view-button" href="${detail.url}" target="_blank" rel="noreferrer">View Project <span aria-hidden="true">↗</span></a>` : ''}</article></div>
       </div>
       <section class="detail-tools"><h2>Tools:</h2><div class="detail-tools-grid">${detail.tools.map((tool) => `<div class="skill-card detail-tool-card"><img src="${toolIcons[tool]}" alt="" /><span>${tool}</span></div>`).join('')}</div></section>

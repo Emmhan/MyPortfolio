@@ -100,6 +100,46 @@ function setupProjectFilters() {
   search.addEventListener('input', update)
 }
 
+function setupGraphicImagePreview() {
+  const previews = [...document.querySelectorAll('[data-full-image]')]
+  if (!previews.length) return
+  const lightbox = document.createElement('div')
+  lightbox.className = 'image-lightbox'
+  lightbox.hidden = true
+  lightbox.innerHTML = '<button class="image-lightbox-close" type="button" aria-label="Close full image">×</button><img alt="Full-size graphic preview" />'
+  document.body.append(lightbox)
+  const image = lightbox.querySelector('img')
+  const close = () => {
+    lightbox.hidden = true
+    document.body.classList.remove('lightbox-open')
+    image.removeAttribute('src')
+  }
+  const open = (preview) => {
+    image.src = preview.dataset.fullImage
+    image.alt = preview.getAttribute('aria-label') || 'Full-size graphic preview'
+    lightbox.hidden = false
+    document.body.classList.add('lightbox-open')
+  }
+  previews.forEach((preview) => {
+    preview.addEventListener('click', (event) => {
+      event.stopPropagation()
+      open(preview)
+    })
+    preview.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return
+      event.preventDefault()
+      open(preview)
+    })
+  })
+  close.addEventListener('click', close)
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) close()
+  })
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !lightbox.hidden) close()
+  })
+}
+
 export function renderPage() {
   const page = currentPage()
   const content = projectRoutes[window.location.pathname] ? renderProjectDetailPage(page) : pages[page]()
@@ -107,6 +147,7 @@ export function renderPage() {
   setupContactForm()
   setupMobileMenu()
   setupProjectFilters()
+  setupGraphicImagePreview()
 }
 
 export function setupRouter() {
