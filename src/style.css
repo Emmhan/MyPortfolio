@@ -317,6 +317,9 @@ code {
 .fourth-graphic-image { background-image: url('/Images/FourthGraphic.png'); }
 .graphic-project-card .project-image { border: 1px solid var(--line); pointer-events: none; }
 .graphic-detail-image { display: block; align-self: start; justify-self: center; width: min(100%, 520px); height: auto; max-height: 75vh; object-fit: contain; border: 0; border-radius: 4px; background: transparent; box-shadow: none; }
+.graphic-detail-frame, .graphic-detail-gallery { padding: 0; border: 0; background: transparent; box-shadow: none; }
+.graphic-detail-frame::before, .graphic-detail-frame::after, .graphic-detail-gallery::before, .graphic-detail-gallery::after { display: none; }
+.graphic-detail-frame img { display: block; width: min(100%, 520px); height: auto; max-height: 75vh; object-fit: contain; border: 0; background: transparent; box-shadow: none; }
 .project-placeholder-card .project-image::after { background: none; }
 .project-placeholder-card .project-image span { color: var(--ink); }
 .detail-tools-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 24px; }
