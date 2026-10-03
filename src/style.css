@@ -311,6 +311,10 @@ code {
 .parking-image { background-image: url('/Images/smartparking.jpg'); }
 .team-portfolio-image { background: #050505 url('/Images/teamportfolio.png') center / cover no-repeat; }
 .mobile-project-image { background-image: url('/Images/mobile.png?v=2'); }
+.first-graphic-image { background-image: url('/Images/FirstGraphic.png'); }
+.second-graphic-image { background-image: url('/Images/SecondGraphic.png'); }
+.third-graphic-image { background-image: url('/Images/ThirdGraphic.png'); }
+.fourth-graphic-image { background-image: url('/Images/FourthGraphic.png'); }
 .project-placeholder-card .project-image::after { background: none; }
 .project-placeholder-card .project-image span { color: var(--ink); }
 .detail-tools-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 24px; }

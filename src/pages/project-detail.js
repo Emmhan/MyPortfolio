@@ -26,6 +26,30 @@ const projects = {
     image: '/Images/mobile.png?v=2',
     tools: ['Unity', 'C#', 'HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
     description: 'An Android-based mobile learning platform designed to enhance the learning experience of DCIT-21: Introduction to Computing students at Cavite State University–Imus Campus. The system provides interactive lessons, assessments, and 2D simulations of computer hardware activities, allowing students to practice concepts such as computer assembly, disassembly, and basic hardware servicing in a virtual environment. The platform also includes performance monitoring to help students track their progress while giving instructors a way to monitor and evaluate learning performance. By combining mobile learning, interactive simulations, and progress tracking, the project aims to provide students with accessible hands-on practice beyond the traditional classroom and laboratory setting.'
+  },
+  visualArchive: {
+    title: 'Visual Archive', date: 'Add project date',
+    image: '/Images/FirstGraphic.png',
+    tools: ['Graphic Design'],
+    description: 'A visual archive poster exploring editorial composition, image treatment, typography, and an urban night-shift aesthetic.'
+  },
+  tofuShop: {
+    title: 'Fujiwara Tofu Shop', date: 'Add project date',
+    image: '/Images/SecondGraphic.png',
+    tools: ['Graphic Design'],
+    description: 'A product-focused graphic design piece for Fujiwara Tofu Shop, combining bold typography, automotive-inspired imagery, and a strong red and gray visual system.'
+  },
+  starbucksCampaign: {
+    title: 'Starbucks Frappuccino Campaign', date: 'Add project date',
+    image: '/Images/ThirdGraphic.png',
+    tools: ['Graphic Design'],
+    description: 'A promotional beverage graphic featuring layered product visuals, flavor callouts, and an energetic campaign layout.'
+  },
+  portraitEditorial: {
+    title: 'Portrait Editorial', date: 'Add project date',
+    image: '/Images/FourthGraphic.png',
+    tools: ['Graphic Design'],
+    description: 'An editorial portrait composition using dramatic blue tones, layered textures, and vertical typography to create a moody visual identity.'
   }
 }
 
@@ -45,6 +69,7 @@ const toolIcons = {
   'React.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
   Tailwind: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
   'Node.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg',
+  'Graphic Design': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg',
 }
 
 export function renderProjectDetailPage(project) {

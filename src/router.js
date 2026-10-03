@@ -17,6 +17,10 @@ const projectRoutes = {
   '/projects/smart-parking': 'smartParking',
   '/projects/new-web-project': 'newWebProject',
   '/projects/mobile-project': 'mobileProject',
+  '/projects/visual-archive': 'visualArchive',
+  '/projects/tofu-shop': 'tofuShop',
+  '/projects/starbucks-campaign': 'starbucksCampaign',
+  '/projects/portrait-editorial': 'portraitEditorial',
 }
 
 function currentPage() {
