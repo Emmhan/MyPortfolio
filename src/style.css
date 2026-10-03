@@ -316,11 +316,8 @@ code {
 .third-graphic-image { background-image: url('/Images/ThirdGraphic.png'); }
 .fourth-graphic-image { background-image: url('/Images/FourthGraphic.png'); }
 .graphic-project-card .project-image { border: 1px solid var(--line); pointer-events: none; }
-.graphic-detail-gallery { justify-self: center; overflow: visible; background: transparent; text-align: center; }
-.graphic-detail-frame { position: relative; display: inline-block; padding: 4px; isolation: isolate; text-align: left; }
-.graphic-detail-frame::before { content: ''; position: absolute; z-index: -2; inset: 0; border-radius: 8px; background: linear-gradient(135deg, #7da8ff, #cda8f8 48%, #f59be4); transform: rotate(3deg); }
-.graphic-detail-frame::after { content: ''; position: absolute; z-index: -1; inset: 4px; border-radius: 4px; background: var(--paper); }
-.graphic-detail-frame img { display: block; object-fit: contain; background: #eef0f3; border-radius: 4px; }
+.graphic-detail-gallery { justify-self: center; overflow: visible; background: transparent; }
+.graphic-detail-gallery img { display: block; width: auto; max-width: 100%; max-height: 75vh; object-fit: contain; background: #eef0f3; }
 .project-placeholder-card .project-image::after { background: none; }
 .project-placeholder-card .project-image span { color: var(--ink); }
 .detail-tools-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 24px; }

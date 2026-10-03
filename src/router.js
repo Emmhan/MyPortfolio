@@ -100,30 +100,6 @@ function setupProjectFilters() {
   search.addEventListener('input', update)
 }
 
-function setupGraphicDetailSizing() {
-  const frames = [...document.querySelectorAll('.graphic-detail-frame')]
-  if (!frames.length) return
-  const resize = () => frames.forEach((frame) => {
-    const image = frame.querySelector('img')
-    if (!image?.naturalWidth || !image.naturalHeight) return
-    const gallery = frame.closest('.graphic-detail-gallery')
-    const availableWidth = Math.max(0, (gallery?.parentElement.clientWidth || image.naturalWidth) - 16)
-    const scale = Math.min(1, window.innerHeight * .75 / image.naturalHeight, availableWidth / image.naturalWidth)
-    const imageWidth = Math.round(image.naturalWidth * scale)
-    const imageHeight = Math.round(image.naturalHeight * scale)
-    image.style.width = `${imageWidth}px`
-    image.style.height = `${imageHeight}px`
-    frame.style.width = `${imageWidth + 8}px`
-    if (gallery) gallery.style.width = `${imageWidth + 8}px`
-  })
-  frames.forEach((frame) => {
-    const image = frame.querySelector('img')
-    if (image.complete) resize()
-    else image.addEventListener('load', resize, { once: true })
-  })
-  window.addEventListener('resize', resize)
-}
-
 export function renderPage() {
   const page = currentPage()
   const content = projectRoutes[window.location.pathname] ? renderProjectDetailPage(page) : pages[page]()
@@ -131,7 +107,6 @@ export function renderPage() {
   setupContactForm()
   setupMobileMenu()
   setupProjectFilters()
-  setupGraphicDetailSizing()
 }
 
 export function setupRouter() {

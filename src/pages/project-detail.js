@@ -78,7 +78,7 @@ export function renderProjectDetailPage(project) {
     <section class="project-detail page-section">
       <a class="project-back" href="/projects">← All Projects</a>
       <div class="project-detail-grid">
-        <div class="detail-gallery${detail.category === 'graphic' ? ' graphic-detail-gallery' : ''}">${detail.category === 'graphic' ? `<div class="graphic-detail-frame"><img src="${detail.image}" alt="${detail.title} project preview" /></div>` : `<img src="${detail.image}" alt="${detail.title} project preview" />`}</div>
+        <div class="detail-gallery${detail.category === 'graphic' ? ' graphic-detail-gallery' : ''}"><img src="${detail.image}" alt="${detail.title} project preview" /></div>
         <div class="detail-copy"><h1>${detail.title}</h1><p class="detail-date">${detail.date}</p><article><h2>Description</h2>${detail.description.split('\n\n').map((paragraph) => `<p>${paragraph}</p>`).join('')}${project === 'newWebProject' ? `<a class="project-view-button" href="${detail.url}" target="_blank" rel="noreferrer">View Project <span aria-hidden="true">↗</span></a>` : ''}</article></div>
       </div>
       <section class="detail-tools"><h2>Tools:</h2><div class="detail-tools-grid">${detail.tools.map((tool) => `<div class="skill-card detail-tool-card"><img src="${toolIcons[tool]}" alt="" /><span>${tool}</span></div>`).join('')}</div></section>
