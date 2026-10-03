@@ -315,6 +315,7 @@ code {
 .second-graphic-image { background-image: url('/Images/SecondGraphic.png'); }
 .third-graphic-image { background-image: url('/Images/ThirdGraphic.png'); }
 .fourth-graphic-image { background-image: url('/Images/FourthGraphic.png'); }
+.graphic-project-card .project-image { border: 1px solid var(--line); pointer-events: none; }
 .graphic-detail-gallery img { aspect-ratio: auto; max-height: 75vh; object-fit: contain; background: #eef0f3; }
 .project-placeholder-card .project-image::after { background: none; }
 .project-placeholder-card .project-image span { color: var(--ink); }
