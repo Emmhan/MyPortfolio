@@ -31,25 +31,25 @@ const projects = {
     title: 'Visual Archive', date: 'October 01, 2026',
     image: '/Images/FirstGraphic.png',
     category: 'graphic', tools: ['Canva'],
-    description: 'A visual archive poster exploring editorial composition, image treatment, typography, and an urban night-shift aesthetic.'
+    description: 'A conceptual editorial poster inspired by urban street culture and late-night city photography. The design combines monochrome image treatment, a highlighted portrait, structured typography, and barcode-inspired details to create a bold visual archive with a contemporary magazine aesthetic.'
   },
   tofuShop: {
     title: 'Fujiwara Tofu Shop', date: 'October 01, 2026',
     image: '/Images/SecondGraphic.png',
     category: 'graphic', tools: ['Canva'],
-    description: 'A product-focused graphic design piece for Fujiwara Tofu Shop, combining bold typography, automotive-inspired imagery, and a strong red and gray visual system.'
+    description: 'A conceptual product poster inspired by Japanese automotive culture and street-racing visuals. It combines a bold tofu shop identity, high-contrast typography, a featured sneaker product, and a red, white, and gray palette to create an energetic and memorable advertising composition.'
   },
   starbucksCampaign: {
     title: 'Starbucks Frappuccino Campaign', date: 'September 28, 2026',
     image: '/Images/ThirdGraphic.png',
     category: 'graphic', tools: ['Canva'],
-    description: 'A promotional beverage graphic featuring layered product visuals, flavor callouts, and an energetic campaign layout.'
+    description: 'A conceptual beverage advertisement inspired by café branding and seasonal drink campaigns. Layered frappuccino imagery, flavor labels, splash effects, and a warm coffee-toned palette work together to create an inviting and energetic promotional layout.'
   },
   portraitEditorial: {
     title: 'Portrait Editorial', date: 'September 28, 2026',
     image: '/Images/FourthGraphic.png',
     category: 'graphic', tools: ['Canva'],
-    description: 'An editorial portrait composition using dramatic blue tones, layered textures, and vertical typography to create a moody visual identity.'
+    description: 'A conceptual portrait editorial inspired by cinematic photography and experimental magazine layouts. Deep blue tones, layered light textures, vertical red typography, and a close-up portrait create a dramatic, atmospheric, and fashion-forward visual identity.'
   }
 }
 
