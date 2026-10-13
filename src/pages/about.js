@@ -5,8 +5,8 @@ export function renderAboutPage() {
         <div class="about-image-frame"><img class="about-image" src="/Images/aboutmeprofile.jpg" alt="Emmhan Russell" /></div>
         <div class="about-copy">
           <h2>About Me</h2>
-          <p>I’m currently an undergraduate IT student passionate about technology and software development. Through my academic journey and OJT internship, I’ve been developing my skills in various programming languages and technologies.</p>
-          <p>I enjoy building web applications, solving complex problems, and continuously learning new technologies. My goal is to become a skilled software developer and contribute to innovative projects.</p>
+          <p>I’m a graduate in Information Technology passionate about technology and software development. Through my academic journey and OJT internship, I developed practical skills in various programming languages and technologies.</p>
+          <p>I enjoy building web applications, solving complex problems, and continuously learning new technologies. My goal is to grow as a software developer and contribute to innovative projects that create meaningful digital experiences.</p>
           <a class="button button-dark" href="/CVRUSUME.pdf?v=3" download="Emmhan-Russell-Resume.pdf">Download Resume <span aria-hidden="true">↓</span></a>
         </div>
       </div>
